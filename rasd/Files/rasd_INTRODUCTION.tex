@@ -1,0 +1,186 @@
+\section[Introduction]{\hyperlink{toc}{Introduction}}
+\label{sec:introduction}
+\subsection[Purpose]{\hyperlink{toc}{Purpose}}
+	\label{sec:purpose}
+	This document describes in detail the system in terms of functional and nonfunctional requirements, includes exhaustive descriptions about typical use cases and is used as a contractual basis between the customer and the developer. This document is addressed to the developers of the S2B as well as the actors that will take part in the system. Hence this document is the result of the requirements elicitation and the analysis activities paired with a specific description aimed to precise the behavior of the system.
+
+	
+\subsection[Scope]{\hyperlink{toc}{Scope}}
+	The aim of the system is to provide an an anticipatory governance model for food systems, helping to strengthen the data-driven policy making process of a Country or State/Region. The system involves multiple actors, from policy makers to farmers and agronomists and allows them to have much information and data regarding many of their areas of interest all gathered and easily disposable.\\
+	
+	The system will help:
+	
+	\begin{itemize}
+		\item •	the farmers, to improve their production, by an efficient exchange of suggestions with each other and the possibility to interact with a dedicated agronomist, who is responsible of their area of interest. 
+		\item •	the agronomists, to manage efficiently their area of interest, by visualizing data concerning weather forecasts and farmers’ performance, helping them to keep their daily plan of visits to the farmers updated 
+		\item •	the State’s policy makers, to keep track of the farmers’ performance, in order to give special incentives to the best ones and to help the ones who are performing particularly bad, and to evaluate the agronomist’s steering initiatives.
+	\end{itemize}
+
+	Now that we have a first description of what DREAMS aims to achieve, we can have a look at the goals that have been chosen in order to accomplish these functionalities.
+	
+	\newpage
+	
+	\subsubsection[Goals]{\hyperlink{toc}{Goals}}
+		\label{sec:goals}
+		\begin{enumerate}[label=\textbf{G\arabic*}]
+			\item \label{goal:G1} Allow Farmers to monitor their production and statistics
+			\item \label{goal:G2} Allow Farmers to specify any problem and update about their production
+			\item \label{goal:G3} Allow Farmers to interact with other Farmers
+			\item \label{goal:G4} Allow Farmers to interact with Agronomists and viceversa
+			\item \label{goal:G5} Allow Agronomists to organize and simplify their work according to their area of interest	
+			\item \label{goal:G6} Allow Agronomists to visualize best/worst performing farmers in their area of interest
+			\item \label{goal:G7} Allow Telangana's Policy Makers to visualize best/worst performing farmers
+			\item \label{goal:G8} Allow Telangana's Policy Makers to analyze agronomists' work
+		\end{enumerate}
+	
+	\vspace{1cm}
+	
+	\subsubsection[World and Shared Phenomena]{\hyperlink{toc}{World and Shared Phenomena}}
+		\label{sec:wsphenomena}
+		\begin{enumerate}[label=\textbf{WP\arabic*}]
+			\item \label{wp:WP1} Farmer decides to improve his production of a particular crop field.
+				\begin{enumerate}
+					\item [\textbf{SP1A}] Farmer defines in the system data about his production field.
+					\item [\textbf{SP1B}] Farmer visualizes data relevant to his production and location.
+				\end{enumerate}
+			\item \label{wp:WP2} Farmer installs useful sensors on a field he owns.
+				\begin{enumerate}
+					\item [\textbf{SP2A}] Farmer defines in the system every sensor he installed.
+				\end{enumerate}
+			\item \label{wp:WP3} Sensors gather data from the field.
+				\begin{enumerate}
+					\item [\textbf{SP3A}] Sensors send data through a communication infrastructure to the system.
+				\end{enumerate}
+			\item \label{wp:WP4} Farmer faces a problem or notices peculiar aspects of his production.
+				\begin{enumerate}
+					\item [\textbf{SP4A}] Farmer inserts in the system updates about his problem and peculiar aspects he faced.
+				\end{enumerate}
+			\item \label{wp:WP5} Farmer takes a picture of the field.
+				\begin{enumerate}
+					\item [\textbf{SP5A}] Farmer inserts in the system the photo he shot.
+				\end{enumerate}
+			\item \label{wp:WP6} Farmer wants to talk with other farmers.
+				\begin{enumerate}
+					\item [\textbf{SP6A}] Farmer creates/participates to discussion forums with other farmers.
+					\item [\textbf{SP6B}] Farmer reports off topics in the topic of the discussion forum.
+					\item [\textbf{SP6C}] The system received more than a certain number of reports for a post.
+					\item [\textbf{SP6D}] The system removes the post.
+				\end{enumerate}
+			\item \label{wp:WP7} Farmer wants to share his knoledge about a crop type.
+				\begin{enumerate}
+					\item [\textbf{SP7A}] Farmer inserts in the system suggestions about a crop type.
+					\item [\textbf{SP7B}] The system forwards the suggestions to all farmer that own the targeted crop.
+					\item [\textbf{SP7C}] Farmer receives a notification about a new suggestion that has been received.
+				\end{enumerate}
+			\item \label{wp:WP8} The field has completed his production.
+			\item \label{wp:WP9} Farmer harvests his production field.
+				\begin{enumerate}
+					\item [\textbf{SP9A}] Farmer declares in the system that a production field has been harvested.
+					\item [\textbf{SP9B}] The system builds a performance index for the farmer.
+					\item [\textbf{SP9C}] The system builds a performance index for the Agronomist that helped the farmer.
+				\end{enumerate}
+			\item \label{wp:WP10} Farmer wants to contact privately another Farmer or an Agronomist.
+				\begin{enumerate}
+					\item [\textbf{SP10A}] Farmer sends an help request through the system to a Farmer or an Agronomist.
+					\item [\textbf{SP10B}] Farmer or Agronomist replies.
+					\item [\textbf{SP10C}] Farmer or Agronomist blacklists the contact that sent the help request.
+					\item [\textbf{SP10D}] Farmer or Agronomist removes a contact from his blacklist.
+				\end{enumerate}
+			\item \label{wp:WP11} Farmer has not yet been visited twice by an Agronomist during the current year.
+				\begin{enumerate}
+					\item [\textbf{SP11A}] The system notifies Agronomists whose area of interest covers the above mentioned Farmer.
+				\end{enumerate}
+			\item \label{wp:WP12} Agronomist reviews farmers' work according to his area of interest.
+				\begin{enumerate}
+					\item [\textbf{SP12A}] Agronomist sees farmers in the system.
+					\item [\textbf{SP12B}] Agronomist sees in the system production data of a Farmer.
+					\item [\textbf{SP12C}] Agronomist publishes a suggestion for the Farmer.
+				\end{enumerate}
+			\item \label{wp:WP13} Agronomist wants to memorize which farms he has to visit for the next day.
+				\begin{enumerate}
+					\item [\textbf{SP13A}] The system builds a new daily plan for Agronomist.
+					\item [\textbf{SP13B}] The Agronomist inserts all farms to be visited in the daily plan.
+				\end{enumerate}
+			\item \label{wp:WP14} Agronomists visited all farms he has to visit according to his plan.
+				\begin{enumerate}
+					\item [\textbf{SP14A}] Agronomists confirms his daily plan.
+				\end{enumerate}
+			\item \label{wp:WP15} Telangana's Policy Maker decides to monitor farmers' performances.
+				\begin{enumerate}
+					\item [\textbf{SP15A}] Telangana's Policy Maker asks the system to display farmers and their performances.
+				\end{enumerate}
+			\item \label{wp:WP16} Telangana's Policy Maker decides to monitor agronomist strategies.
+				\begin{enumerate}
+					\item [\textbf{SP16A}] Telangana's Policy Maker asks the system to display steering initiatives carried out by agronomists with the help of good farmers.
+				\end{enumerate}
+			\item \label{wp:WP17} Telangana's government releases incentives for good farmers .
+		\end{enumerate}
+		
+		\vspace{1cm}
+
+\subsection[Glossary]{\hyperlink{toc}{Glossary}}
+	\label{sec:glossary}
+	
+	\subsubsection[Definitions]{\hyperlink{toc}{Definitions}}
+		\begin{itemize}
+			\item \textbf{Unauthenticated User:} An user that is not authenticated; he is not allowed to use all the DREAM functions except for Login and Registration.
+			\item \textbf{User:} An authenticated user; he can use the DREAM functions relevant for his role.
+			\item \textbf{Farmer:} An user that owns a "Farmer" account; he can access to the DREAM functions useful for Farmers.
+			\item \textbf{Agronomist:} An user that owns an "Agronomist" account; he can access to the DREAM functions useful for Agronomists.
+			\item \textbf{Telangana's Policy Maker:} An user that owns a "Telangana's Policy Maker" account; he can access to the DREAM functions useful for Telangana's Policy Makers
+			\item \textbf{Production Field:} A virtualized element that corresponds to an existing production field for a Farmer. It is mainly defined by its crop and the owner of the field..
+			\item \textbf{Performance Index (Farmers):} A numerical index useful for ranking farmers whose formulation is based on the average of the combination of three parameters per timeline: number of crops planted for production field, number of crops harvested for production field, weather conditions during the production field cultivation. A possible formulation is: E[cropsPlanted(productionField, timeOfPlanting)/cropsHarvested(productionField, timeOfHarvesting) * weatherAverageIndexConditions(timeOfHarvesting-timeOfPlanting)]. Where E means "Expected Value" based on a two parameters function and weatherAverageIndexConditions is an index quantifying how bad/good weather conditions were in the cultivation temporal window.
+			\item \textbf{Performance Index (Agronomists):} A numerical index useful for ranking agronomists whose formulation is based on the average of the combination of two parameters per timeline: number of Farmer visited, improvement of Farmers.
+			\item \textbf{Geographical Location:} A geographical location in which at most one Farmer can work/owns production fields.
+			\item \textbf{Area of Interest:} A geographical area in which one or more Agronomists can work. Each area groups different geographical locations; each Agronomist is associated with one and only one area of interest.
+			\item \textbf{Topic:} A virtual sub-place of discussion consiting of a particular argument.
+			\item \textbf{Comment:} A virtual opinion of a Farmer that populates a topic.
+			\item \textbf{Off-Topic:} The act of talking of useless things that do not fit into the bounds of the main context of the topic.
+			\item \textbf{Help Request:} A request for help sent by a Farmer to an Agronomist or a Farmer.
+			\item \textbf{Help Reply:} A reply to an help request sent by an Agronomist or a Farmer to a Farmer.
+			\item \textbf{Blacklist:} A virtual list owned by a contact. The list is populated by blocked contacts (contacts that can't send messages to the owner of the list).
+		    \item \textbf{Message:} Help Request or Help Reply.
+			\item \textbf{Inbox:} A virtual inbox containing messages for a contact.
+			\item \textbf{Daily Plan:}A virtual memo-like plan owned by an Agronomist. It contains farm(er)s to visit and it is created day by day.
+		    \item \textbf{Report:} A virtual reporting to a potentially offending post or topic. 
+		    \item \textbf{Private Suggestion:} A suggestion written by an Agronomist for a Farmer.
+		    \item \textbf{Crop Based Suggestion/Farmer Suggestion:} A suggestion written by a Farmer. It is based on a particular crop type..
+		    \item \textbf{Personalized Suggestion :} Synonim for Crop Based Suggestion.
+	   	    \item \textbf{Farmer Statistics:} Statistics built by the system for the Farmer. They are built day by day and they involve several aspects like planted crops in a particular day and harvested crops in another day. They are represented through cartesian graphs with timeline on x axis.
+	   	    \item \textbf{Agronomist Statistics} Statistics built by the system for the Agronomist. They are built day by day and they involve several aspects like visted farm(er)s in a particular day, improvement of farmers detected in another day. They are represented through cartesian graphs with timeline on x axis.	    
+		\end{itemize}
+	
+	\subsubsection[Acronyms]{\hyperlink{toc}{Acronyms}}
+		\begin{itemize}
+			\item \textbf{RASD:} Requirement Analysis and Specification Document
+			\item \textbf{IoT:} Internet of Things (devices)
+		\end{itemize}
+	
+	\subsubsection[Abbreviations]{\hyperlink{toc}{Abbreviations}}
+		\begin{itemize}
+	        \item \textbf{TPM:} Telangana's Policy Maker
+	        \item \textbf{DA:} Domain assumption
+	        \item \textbf{G:} goal
+			\item \textbf{WP:} World Phenomena
+			\item \textbf{SP:} Shared Phenomena
+			\item \textbf{R:} Requirement
+		\end{itemize}
+		
+\subsection[Document Structure]{\hyperlink{toc}{Document Structure}}
+	The document is structured in a double linked way in order to provide an easier and quicker navigation in particular for the parts where several abbreviations are used and the entire text would not fit in the layout. The aim is to give a description that interconnects the most interesting parts of the document that are also related in a theoretical point of view: \textbf{\hyperref[sec:worldMachine]{World and Machine}},
+	\textbf{\hyperref[sec:goalSatisfaction]{Goals and Requirements}}  and \textbf{\hyperref[sec:useCases]{Use Cases}.}\\
+	
+	Moreover the document is structured as now briefly described:
+	\begin{enumerate}
+		\item \textbf{\hyperref[sec:introduction]{Introduction}:} gives a first description of the problem and describes the purpose of the DREAM system. Goals are also highlighted to enforce the previous shallow description; the section ends with the glossary.
+		
+		\item \textbf{\hyperref[sec:overallDescription]{Overall Description}:} starts with the product perspective where first the system is highlighted from the outside and then from the inside with a high-level description of its structure. State diagrams are then used to clarify the behavior of the most critical objects identified in the modeling process and then product functions are ready to be precisely described. The section ends with the identification of the important phenomena for the problem that are now clearly described with the World and Machine paradigm.
+		
+		\item \textbf{\hyperref[sec:specificRequirements]{Specific Requirements}:} in this section, requirements are precisely described starting with the ones of the interfaces that DREAM uses to provide its services to the external world. Functional requirements, where the satisfaction of the goals is proved thanks to the requirements, and the domain assumptions previously defined, are the core of this section. Use cases are also important in particular to highlight their strict relation with the requirements also highlighted with the traceability matrix.
+		
+		\item \textbf{\hyperref[sec:formalAnalysisUsingAlloy]{Formal Analysis Using Alloy}:} includes the model that is described formally thanks to the alloy language. This section highlights the most critical aspects of the entire problem and proves their satisfaction in specific worlds generated for this purpose.
+		
+		\item \textbf{\hyperref[sec:effortSpent]{Effort Spent}:} this section has been used to keep track of the hours spent to complete this document. The first table defines the hours spent together while taking the most important decisions, the seconds instead contain the individual hours.
+		
+		\item \textbf{\hyperref[sec:references]{References}:} includes all the references used to define the document.
+	\end{enumerate}
